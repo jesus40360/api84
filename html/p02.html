@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id = "head_contenido"></head>
+
+<body>
+    <div class="container">
+
+        <main>
+            <div id="header_contenido">
+
+            </div>
+            <div class="card">
+                <img src="/img/mano tecnologica.jpg" class="card-img-top" alt="Practica 02" style="width: 15rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Practica 02</h5>
+                  <p class="card-text">Usar el Objeto Nativo XMLHttpRequest para realizar transferencia de Informacion.</p>
+                  <center>
+                    <h2>buscar usuario</h2>
+                    <label for="id">id del usuario:</label><input type="number" name="id" id="idjson">
+                  <button id="buscar" type="button" class="btn btn-secondary">Buscar</button>
+                  <button id="limpiar" type="button" class="btn btn-secondary">Limpiar</button>
+                  <br><br>
+                 </center>
+                    <h2>id del usuario</h2>
+                    <br>
+                    <table class="table" id="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">name</th>
+                            <th scope="col">username</th>
+                            <th scope="col">email</th>
+                            <th scope="col">address</th>
+                            <th scope="col">phone</th>
+                            <th scope="col">website</th>
+                            <th scope="col">company</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbody">
+                          
+                        </tbody>
+                      </table>
+                  <p id="mensaje" class="card-text"></p>
+                </div>
+            </div>
+
+        </main>
+
+    <footer>
+        <div id="footer_contenido">
+
+        </div>
+    </footer>
+    </div>
+</body>
+    <script src="/js/partial.js"></script>
+    <script src="/js/p02.js"></script>
+</html>
