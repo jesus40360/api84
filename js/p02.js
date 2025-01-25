@@ -16,7 +16,7 @@ function buscar() {
     }
 
     const http = new XMLHttpRequest();
-    const url = `https://jsonplaceholder.typicode.com/albums/${id}`;
+    const url = `https://jsonplaceholder.typicode.com/albums/` + id;
     http.open('GET', url, true);
     http.send();
 
