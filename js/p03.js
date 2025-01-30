@@ -45,6 +45,7 @@ fetch(url)
 }
 
 function mostrar(data){
+    limpiar();
 let registros = 1;
     const fila = document.createElement('tr');
     const col1 = document.createElement('td');
@@ -73,4 +74,5 @@ function limpiar(){
     tbody.innerHTML = "";
     mensaje.innerHTML = "";
     poster.src ="/img/poster.png"
+
 }
