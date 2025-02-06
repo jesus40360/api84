@@ -35,6 +35,13 @@ function mostrarRazas(razas) {
             opcion.value = raza;
             opcion.textContent = raza;
             lista.appendChild(opcion);
+        } else {
+            razas[raza].forEach(subRaza => {
+                const opcion = document.createElement('option');
+                opcion.value = `${raza}/${subRaza}`;
+                opcion.textContent = `${raza} (${subRaza})`;
+                lista.appendChild(opcion);
+            });
         }
     }
 }
