@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head_contenido"></head>
+
+<body>
+    <div class="container">
+        <main>
+            <div id="header_contenido"></div>
+
+            <!-- Card -->
+            <div class="card">
+                <img src="/img/TheCocktaildb.png" class="card-img-top" alt="Practica 05" style="width: 15rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Practica 05</h5>
+                    <p class="card-text">Uso de Fetch para consumir API de cócteles y mostrar su información.</p>
+
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Seleccionar el cóctel</option>
+                        </select>
+                        <label for="floatingSelect">API TheCocktailDB</label>
+                    </div>
+
+                    <button id="btnBuscar" type="button" class="btn btn-secondary">Buscar Cóctel</button>
+                    <button id="limpiar" type="button" class="btn btn-secondary">Limpiar</button>
+                    <br><br>
+
+                    <center>
+                        <h2>Cócteles</h2>
+                        <br>
+                        <img src="/img/coctel.png" class="img-thumbnail" alt="Cóctel" id="poster" style="width: 200px;">
+                    </center>
+
+                    <p id="mensaje" class="card-text"></p>
+
+                    <!-- Tabla para mostrar la información del cóctel -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Ingredientes</th>
+                                <th scope="col">Receta</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-cocteles">
+                        </tbody>
+                    </table>
+                    <hr>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div id="footer_contenido"></div>
+        </footer>
+    </div>
+
+    <script src="/js/partial.js"></script>
+    <script src="/js/p05.js"></script>
+</body>
+</html>
