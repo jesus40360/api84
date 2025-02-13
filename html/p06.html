@@ -4,6 +4,7 @@
     <title>Practica 06 - API Cócteles</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Aquí puedes agregar tus estilos o Bootstrap si lo deseas -->
 </head>
 <body>
     <div class="container">
@@ -18,25 +19,22 @@
                     <h5 class="card-title">Practica 06</h5>
                     <p class="card-text">Uso de Fetch y Axios para consumir la API de cócteles.</p>
 
-                    <div class="form-floating">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                            <option selected>Seleccionar el cóctel</option>
-                        </select>
-                        <label for="floatingSelect">API TheCocktailDB</label>
-                    </div>
+    
 
-                    <button id="btnBuscar" type="button" class="btn btn-secondary">Buscar</button>
+                    <!-- Botones -->
+                    <button id="btnBuscar" type="button" class="btn btn-secondary">Cóctel Aleatorio</button>
                     <button id="limpiar" type="button" class="btn btn-secondary">Limpiar</button>
                     <br><br>
 
                     <center>
                         <h2>Cócteles</h2>
                         <br>
-                        <img src="/img/coctel.png" class="img-thumbnail" alt="Cóctel" id="poster" style="width: 200px;">
+                        <img src="/img/mojito.png" class="img-thumbnail" alt="Cóctel" id="poster" style="width: 200px;">
                     </center>
 
                     <p id="mensaje" class="card-text"></p>
 
+                    <!-- Tabla para mostrar la información del cóctel -->
                     <table class="table">
                         <thead>
                             <tr>
@@ -45,8 +43,7 @@
                                 <th scope="col">Receta</th>
                             </tr>
                         </thead>
-                        <tbody id="tabla-cocteles">
-                        </tbody>
+                        <tbody id="tabla-cocteles"></tbody>
                     </table>
                 </div>
             </div>
@@ -57,6 +54,7 @@
         </footer>
     </div>
 
+    <!-- Incluir Axios desde CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/partial.js"></script>
     <script src="/js/p06.js"></script>

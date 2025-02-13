@@ -1,5 +1,3 @@
-/* p05.js */
-
 const btnBuscar = document.getElementById('btnBuscar');
 const btnLimpiar = document.getElementById('limpiar');
 const lista = document.getElementById('floatingSelect');
@@ -12,7 +10,6 @@ btnLimpiar.addEventListener('click', limpiar);
 
 window.onload = cargarListaCocteles;
 
-// Cargar lista de cócteles por primera letra usando Fetch
 function cargarListaCocteles() {
     const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
 
@@ -36,9 +33,7 @@ function cargarListaCocteles() {
         });
 }
 
-// Mostrar cócteles en el combobox
 function mostrarListaCocteles(cocteles) {
-    // Reiniciamos el combobox con la opción predeterminada
     lista.innerHTML = `<option selected>Seleccionar el cóctel</option>`;
     cocteles.forEach(coctel => {
         const opcion = document.createElement('option');
@@ -48,7 +43,6 @@ function mostrarListaCocteles(cocteles) {
     });
 }
 
-// Cargar detalles del cóctel seleccionado usando Fetch
 function cargarCoctel() {
     const seleccion = lista.value;
     if (seleccion === "Seleccionar el cóctel") {
@@ -81,12 +75,11 @@ function cargarCoctel() {
         });
 }
 
-// Mostrar los detalles del cóctel en la tabla
+
 function mostrarDetallesEnTabla(coctel) {
-    // Limpiar la tabla
     tablaCocteles.innerHTML = "";
 
-    // Construir la lista de ingredientes y sus medidas
+    
     let ingredientes = "";
     for (let i = 1; i <= 15; i++) {
         const ing = coctel[`strIngredient${i}`];
@@ -96,7 +89,7 @@ function mostrarDetallesEnTabla(coctel) {
         }
     }
 
-    // Crear la fila con los datos del cóctel
+
     const fila = `
         <tr>
             <td>${coctel.strDrink}</td>
@@ -107,7 +100,6 @@ function mostrarDetallesEnTabla(coctel) {
     tablaCocteles.innerHTML = fila;
 }
 
-// Función para limpiar y restaurar a su estado por defecto
 function limpiar() {
     imagen.src = "/img/coctel.png";
     mensaje.innerHTML = "";
